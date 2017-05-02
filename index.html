@@ -23,21 +23,38 @@
 
 <body>
 	
-	<div id="loading" style="position:absolute;">
-		<div class="preloader-wrapper big active">
-			<div class="spinner-layer spinner-blue-only">
-				<div class="circle-clipper left">
-					<div class="circle"></div>
-				</div><div class="gap-patch">
-					<div class="circle"></div>
-				</div><div class="circle-clipper right">
-					<div class="circle"></div>
-				</div>
+	<ul id="nav-mobile-1" class="side-nav" style="padding-left:0px">
+		<li><a href="/">첫페이지로</a></li>
+		<li><a href="#">요리문답서<i class="material-icons right">arrow_drop_down</i></a>
+			<ul class="" style="padding-left:16px;">
+				<li><a href="/cat/shorter">웨스트민스터 소요리문답</a></li>
+	<!--			<li><a href="/catechism/westminster-larger">웨스트민스터 대요리문답</a></li>-->
+				<li><a href="/cat/heidelberg">하이델베르그 요리문답 (준비중)</a></li>
+	<!-- 			<li><a href="/catechism/geneva">제네바 요리문답</a></li> -->
+			</ul>
+		</li>
+		<li><a href="#">신앙고백서<i class="material-icons right">arrow_drop_down</i></a>
+			<ul class="" style="padding-left:16px;">
+				<li><a href="/cf/apostles">사도신경</a></li>
+				<li><a href="/cf/nicene">니케아 신경</a></li>
+				<li><a href="/cf/constantinople">콘스탄티노플 신경</a></li>
+				<li><a href="/cf/chalcedon">칼케돈 신조</a></li>
+				<li><a href="/cf/athanasian">아타나시우스 신경</a></li>
+	<!-- 			<li><a href="/confession/belgic-confession-of-faith">벨직 신앙고백서</a></li> -->
+	<!-- 			<li><a href="/confession/the-second-helvetic-confession">제2 스위스 신앙고백서</a></li> -->
+	<!-- 			<li><a href="/confession/canons-of-dort">도르트 신경</a></li> -->
+	<!-- 			<li><a href="/confession/westminster-confession-of-faith">웨스트민스터 신앙고백서</a></li> -->
+			</ul>
+		</li>
+	</ul>
+	
+	<div class="navbar-fixed">
+		<nav class="grey darken-2" role="navigation">
+			<div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo center">CREED.CF</a>
+				<a href="#" data-activates="nav-mobile-1" class="button-collapse"><i class="material-icons">menu</i></a>
 			</div>
-		</div>
+		</nav>
 	</div>
-
-	<div id="navi-main"></div>
 
 	<div class="container" id="index-banner" style="padding: 0 20px;">
 		<br><br>
@@ -80,12 +97,14 @@
 
 	<!--  Scripts-->
 	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<!--
 	<script type="text/javascript">
 		//페이지가 로드되면 실행한다.
 		$(document).ready( function() {
 			$("#navi-main").load("/navi-main.html");
 		});
 	</script>
+-->
 	<script type="text/javascript">
 		//페이지가 로드되면 실행한다.
 		$(document).ready( function() {
@@ -93,12 +112,9 @@
 		});
 	</script>
 	
-	<script type="text/javascript">
-		$(document).ready(function() {    
-			$('#loading').hide();  
-		});
-	</script>
-
+	<script src="/js/init.js"></script>
+	<script src="/js/materialize.min.js"></script>
+	
 </body>
 
 </html>
