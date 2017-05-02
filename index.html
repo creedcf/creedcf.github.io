@@ -21,7 +21,40 @@
 
 	
 <body>
-	<div id="navi-main"></div>
+	<div id="navi-main">
+        <ul id="nav-mobile-1" class="side-nav" style="padding-left:0px">
+            <li><a href="/">첫페이지로</a></li>
+            <li><a href="#">요리문답서<i class="material-icons right">arrow_drop_down</i></a>
+                <ul class="" style="padding-left:16px;">
+                    <li><a href="/cat/shorter">웨스트민스터 소요리문답</a></li>
+        <!--			<li><a href="/catechism/westminster-larger">웨스트민스터 대요리문답</a></li>-->
+                    <li><a href="/cat/heidelberg">하이델베르그 요리문답 (준비중)</a></li>
+        <!-- 			<li><a href="/catechism/geneva">제네바 요리문답</a></li> -->
+                </ul>
+            </li>
+            <li><a href="#">신앙고백서<i class="material-icons right">arrow_drop_down</i></a>
+                <ul class="" style="padding-left:16px;">
+                    <li><a href="/cf/apostles">사도신경</a></li>
+                    <li><a href="/cf/nicene">니케아 신경</a></li>
+                    <li><a href="/cf/constantinople">콘스탄티노플 신경</a></li>
+                    <li><a href="/cf/chalcedon">칼케돈 신조</a></li>
+                    <li><a href="/cf/athanasian">아타나시우스 신경</a></li>
+        <!-- 			<li><a href="/confession/belgic-confession-of-faith">벨직 신앙고백서</a></li> -->
+        <!-- 			<li><a href="/confession/the-second-helvetic-confession">제2 스위스 신앙고백서</a></li> -->
+        <!-- 			<li><a href="/confession/canons-of-dort">도르트 신경</a></li> -->
+        <!-- 			<li><a href="/confession/westminster-confession-of-faith">웨스트민스터 신앙고백서</a></li> -->
+                </ul>
+            </li>
+        </ul>
+
+        <div class="navbar-fixed">
+            <nav class="grey darken-2" role="navigation">
+                <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo center">CREED.CF</a>
+                    <a href="#" data-activates="nav-mobile-1" class="button-collapse"><i class="material-icons">menu</i></a>
+                </div>
+            </nav>
+        </div>
+    </div>
 
 	<div class="container" id="index-banner" style="padding: 0 20px;">
 		<br><br>
@@ -55,9 +88,36 @@
 		</div>
 	</div><br>
 
-	<div id="footer"></div>
+<footer class="page-footer grey darken-1">
+	<div class="container" style="padding: 0 20px;">
+		<div class="section">
+			<div class="col l6 s12">
+				<h5 class="white-text">CREED.CF 소개</h5>
+				<ol class="white-text">
+					<li>CREED.CF는 교리문답서와 신앙고백서를 제공하는 웹 애플리케이션(Web Application)입니다.</li>
+					<li>CREED.CF는 스마트폰 및 태블릿을 비롯한 모바일 환경을 우선적으로 고려합니다.</li>
+					<li>CREED: Creed는 교리 혹은 신조로 번역할 수 있는 영어 단어입니다.<br />CF: cf는 Confession을 줄인 약자이며, Confession 역시 신앙 고백, 신조라고 번역할 수 있는 영어 단어입니다.</li>
+				</ol>
+			</div>
+			<div class="col l6 s12">
+				<h5 class="white-text">제공되는 번역본에 대해서</h5>
+				<ol class="white-text">
+					<li>번역본에 저작권과 관련한 문제가 있을시 이메일(xian.choi@gmail.com)로 연락을 주시면 감사하겠습니다.</li>
+					<li>번역본은 (수정 불가가 명시되어 있지 않다면) 원 의미가 훼손되지 않으면서 뜻을 더 잘 전달하기 위하여, 단어나 문장이 일부분 수정될 수 있습니다.</li>
+					<li>“© CREED.CF” 이라고 명시되어 있는 것은 CREED.CF에서 번역한 것입니다. 출처만 적어주시면 자유롭게 퍼가실 수 있습니다.</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+	
+	<div class="footer-copyright" style="padding: 0 20px;">
+		<div class="container">
+			Made by <a class="grey-text text-lighten-3" href="/">Xian Choi</a>
+		</div>
+	</div>
+</footer>
 
-	<!--  Scripts-->
+	<!--  Scripts
 	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript">
 		//페이지가 로드되면 실행한다.
@@ -71,7 +131,24 @@
 			$("#footer").load("/footer.html");
 		});
 	</script>
+-->
+    
 
+    <script src="/js/materialize.min.js"></script>
+    <script src="/js/init.js"></script>
+
+    <script type="text/javascript">
+        $("a[href^='#']").click(function(event) {
+            event.preventDefault();
+            var target = $(this.hash);
+            var header_height = $('.navbar-fixed').height();
+            // 자신의 헤더 클래스 또는 아이디를 선택하여 height값을 가져온다.
+            var offset_top = target.offset().top - header_height; // 대상의 위치에서 헤더값을 빼면 실제 이동해야 할 위치값이 나온다.
+            $('html, body').animate({scrollTop: offset_top}, 500); // 대상이 문서 내에서 사용되면 'html, body' 그대로 사용하면 되고, 내부 스크롤일 경우 내부 선택자를 선택하면 된다.
+        });
+    </script>
+    
+    
 </body>
 
 </html>
