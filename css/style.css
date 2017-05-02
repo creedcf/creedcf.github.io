@@ -1,0 +1,145 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+
+html {
+    font-family: 'Spoqa Han Sans', sans-serif;
+    font-weight: 400;
+    background-color: #f1f1f1;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+    margin : 0;
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+.hr-sup {
+	width: 100%;
+	border-top: solid 0px;
+	border-bottom: solid 1px #f2f2f2;
+    margin: 20px 0;
+}
+
+.container{
+/*    width:100%;*/
+}
+
+.section{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.contents{
+    background-color: #fff;
+    padding: 0 20px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+/*superscript*/
+.ss {
+    font-size: 14px;
+    background: #f4f6f8;
+}
+
+.ssc {
+    color: #D32F2F;
+}
+
+.ssp {
+    padding-bottom: 8px;
+    padding-top: 8px;
+    padding-right: 15px;
+    margin-bottom: 0px;
+}
+
+ul:not(.browser-default) {
+  padding-left: 18px;
+}
+
+li > a, sup {
+	color: #D32F2F;
+}
+
+.header {
+    font-size: 18px;
+	font-weight: bold;
+}
+
+.cut {
+    margin-top: 15px;
+}
+
+.btn-floating {
+    line-height: 0px;
+}
+
+.row {
+	margin-bottom: 0px;
+}
+
+.btn {
+	margin-top: 15px;
+}
+
+.clipboard > img{
+    width:20px;
+}
+
+.clipboard {
+    background-color: #f0f0f0 !important;
+    opacity: 0.3;
+}
+
+.clipboard:hover, .clipboard:active, clipboard:link, clipboard:visited {
+    background-color: #e0e0e0 !important;
+    opacity: 0.6;
+}
+
+:target:before {
+content:"";
+display:block;
+height:80px; /* fixed header height*/
+margin:-80px 0 0; /* negative fixed header height */
+}
