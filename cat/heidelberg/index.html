@@ -54,7 +54,17 @@
 			</ul>
 		</li>
 	</ul>
-	<div id="navi-sub"></div>
+    
+	<div id="navi-main"></div>
+    
+    <div class="navbar-fixed">
+        <nav class="grey darken-2" role="navigation">
+            <div class="nav-wrapper container"><a id="logo-container" href="#top" class="brand-logo center">CREED.CF</a>
+                <a href="#" data-activates="nav-mobile-1" class="button-collapse"><i class="material-icons">menu</i></a>
+                <a href="#" data-activates="nav-mobile-2" class="right button-collapse-2"><i class="material-icons">list</i></a>
+            </div>
+        </nav>
+    </div>
 	
 	<div class="container" id="index-banner">
 		<br><br>
@@ -1852,7 +1862,7 @@
 	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready( function() {
-			$("#navi-sub").load("/navi-sub.html");
+			$("#navi-main").load("/navi-main.html");
 		});
 	</script>
 	<script type="text/javascript">
@@ -1860,6 +1870,8 @@
 			$("#footer").load("/footer.html");
 		});
 	</script>
+	<script src="/js/materialize.js"></script>
+	<script src="/js/init.js"></script>
 
 </body>
 

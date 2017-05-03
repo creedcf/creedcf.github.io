@@ -22,7 +22,17 @@
 		<li><a href="#s4">3. 영문 번역</a></li>
 		<li><a href="#s5">4. 라틴어 원문 <small>Credo</small></a></li>
 	</ul>
-	<div id="navi-sub"></div>
+
+	<div id="navi-main"></div>
+    
+    <div class="navbar-fixed">
+        <nav class="grey darken-2" role="navigation">
+            <div class="nav-wrapper container"><a id="logo-container" href="#top" class="brand-logo center">CREED.CF</a>
+                <a href="#" data-activates="nav-mobile-1" class="button-collapse"><i class="material-icons">menu</i></a>
+                <a href="#" data-activates="nav-mobile-2" class="right button-collapse-2"><i class="material-icons">list</i></a>
+            </div>
+        </nav>
+    </div>
 	
 	<div class="container" id="index-banner" style="padding: 0 20px;">
 		<br><br>
@@ -218,13 +228,11 @@
 	<!--  Scripts-->
 	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript">
-		//페이지가 로드되면 실행한다.
 		$(document).ready( function() {
-			$("#navi-sub").load("/navi-sub.html");
+			$("#navi-main").load("/navi-main.html");
 		});
 	</script>
 	<script type="text/javascript">
-		//페이지가 로드되면 실행한다.
 		$(document).ready( function() {
 			$("#footer").load("/footer.html");
 		});
