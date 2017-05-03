@@ -26,13 +26,13 @@
 <script src="/js/materialize.min.js"></script>
 <script src="/js/init.js"></script>
 
-    <script type="text/javascript">
-        $("a[href^='#']").click(function(event) {
-            event.preventDefault();
-            var target = $(this.hash);
-            var header_height = $('.navbar-fixed').height();
-            // 자신의 헤더 클래스 또는 아이디를 선택하여 height값을 가져온다.
-            var offset_top = target.offset().top - header_height; // 대상의 위치에서 헤더값을 빼면 실제 이동해야 할 위치값이 나온다.
-            $('html, body').animate({scrollTop: offset_top}, 500); // 대상이 문서 내에서 사용되면 'html, body' 그대로 사용하면 되고, 내부 스크롤일 경우 내부 선택자를 선택하면 된다.
-        });
-    </script>
+	<script type="text/javascript">
+		$("a[href^='#']").click(function(event) {
+			event.preventDefault();
+			var target = $(this.hash);
+			var header_height = $('.navbar-fixed').height();
+			// 자신의 헤더 클래스 또는 아이디를 선택하여 height값을 가져온다.
+			var offset_top = target.offset().top - header_height; // 대상의 위치에서 헤더값을 빼면 실제 이동해야 할 위치값이 나온다.
+			$('html, body').animate({scrollTop: offset_top}, 500); // 대상이 문서 내에서 사용되면 'html, body' 그대로 사용하면 되고, 내부 스크롤일 경우 내부 선택자를 선택하면 된다.
+		});
+	</script>
